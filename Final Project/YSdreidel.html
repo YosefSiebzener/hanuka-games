@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dreidel</title>
+    <link href="YSdreidel.css" rel="stylesheet">
+</head>
+<body id="body">
+    <!-- I didn't use any labels because I couldn't position them how I wanted to -->
+    <button id="start" onclick="start()">START</button>
+    <h1 id="welcomeBanner">LET'S PLAY SOME DREIDEL!</h1>
+
+    <div class="names" id="namesLabel">Enter player names (up to 6 players):</div>
+    <input class="names" id="namesInput" type="text"><br><br>
+
+    <div class="gelt" id="geltLabel">Enter gelt amount (players can be given a handicap):</div>
+    <input class="gelt" id="geltInput" type="number">
+    <button class="gelt" id="submitName" onclick="appendNames()">Submit</button><br><br>
+
+    <div class="pot" id="potLabel">Enter starting pot:</div>
+    <input class="pot" id="potInput" type="number">
+    <button class="pot" id="submitPot" onclick="startingPot()">Submit</button>
+    <div class="pot" id="displayPot"></div><br><br>
+
+    <div class="shin" id="shinLabel">Enter amount lost for spinning a shin:</div>
+    <input class="shin" id="shinInput" type="number">
+    <button class="shin" id="submitShin" onclick="shinAmount()">Submit</button>
+    <div class="shin" id="displayShin"></div><br><br>
+
+    <div class="ante" id="anteLabel">Enter ante:</div>
+    <input class="ante" id="anteInput" type="number">
+    <button class="ante" id="submitAnte" onclick="anteAmount()">Submit</button>
+    <div class="ante" id="displayAnte"></div><br><br>
+
+    <!-- In hindsight, I'm not sure if I needed the div tags -->
+    <table id="table">
+        <tr id="tr0">
+            <th id="th0">PLAYERS</th>
+            <th id="th1">SCORES</th>
+        </tr>
+        <tr id="tr1">
+            <td id="td0"><div id="player0"></div></td>
+            <td id="td1"><div id="score0"></div></td>
+        </tr>
+        <tr id="tr2">
+            <td id="td2"><div id="player1"></div></td>
+            <td id="td3"><div id="score1"></div></td>
+        </tr>
+        <tr id="tr3">
+            <td id="td4"><div id="player2"></div></td>
+            <td id="td5"><div id="score2"></div></td>
+        </tr>
+        <tr id="tr4">
+            <td id="td6"><div id="player3"></div></td>
+            <td id="td7"><div id="score3"></div></td>
+        </tr>
+        <tr id="tr5">
+            <td id="td8"><div id="player4"></div></td>
+            <td id="td9"><div id="score4"></div></td>
+        </tr>
+        <tr id="tr6">
+            <td id="td10"><div id="player5"></div></td>
+            <td id="td11"><div id="score5"></div></td>
+        </tr>
+    </table>
+
+    <button id="startGame" onclick="ready()">Start Game!</button>
+
+    <div id="dreidelBox">
+        <p><img id="dreidel" src="spin3.png" alt=""/></p>
+        <p><button id="spinner" onclick="playing()">SPIN</button></p>
+    </div>
+    <div id="potTotal"></div>
+    <p id="alerts"></p>
+    <p id="result"></p>
+    <img id="pic" src="" alt=""/>
+
+    <p id="winnerBanner"></p>
+
+    <button id="restart" onclick="restart()">PLAY AGAIN</button>
+    <a id="mainMenuLink" href="YShome.html"><button id="mainMenuButton">MAIN MENU</button></a>
+
+    <script src="YSdreidel2.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body {
+    background-image: url("YSbackground_gelt.png");
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10em 20em;
+}
+
+h1 {
+    color: rebeccapurple;
+    font-family: Impact, fantasy;
+    font-size: 100px;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+}
+
+button {
+    background-color: #0000ee;
+    color: red;
+    border: red 5px solid;
+    border-radius: .5em;
+    height: 100px;
+    width: 150px;
+    transition: 2.2s;
+    font-size: 20px;
+    font-family: "Bradley Hand ITC", fantasy;
+    font-weight: bolder;
+}
+
+button:hover {
+    background-color: red;
+    color: #0000ee;
+    border: #0000ee 10px solid;
+    height: 200px;
+    width: 300px;
+    transform: rotate(360deg);
+    font-size: 40px;
+}

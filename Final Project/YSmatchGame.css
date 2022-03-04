@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+body {
+    display: grid;
+    grid-template-columns: 11em 11em 11em 11em 11em 11em;
+    grid-template-rows: 3em 7em 7em 7em 7em 3em;
+    grid-gap: 3%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+#start, #playAgain, #mainMenuButton {
+    width: 8em;
+    height: 3em;
+    border-radius: .5em;
+    background-color: #16e814;
+    color: #00b3ff;
+    transition: all 1s;
+    border: 2px #00b3ff solid;
+    font-size: 20px;
+}
+
+#start {
+    grid-row: 4;
+    grid-column: 3 / span 2;
+}
+
+#start:hover, #playAgain:hover, #mainMenuButton:hover {
+    background-color: #00b3ff;
+    color: #16e814;
+    border: 2px #16e814 solid;
+}
+
+#playAgain {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#mainMenuLink {
+    grid-row: 3;
+    grid-column: 5;
+    display: none;
+    text-decoration: none;
+}
+
+#victoryBanner {
+    grid-row: 2;
+    grid-column: 2 / span 4;
+    font-family: Luminari, fantasy;
+    font-size: 40px;
+    color: #0000ee;
+}
+
+#background {
+    grid-row: 2 / span 3;
+    grid-column: 2 / span 4;
+    display: none;
+    opacity: 0.8;
+    position: inherit;
+    z-index: -1;
+    text-align: center;
+    padding: 30px 95px;
+    border: 5px solid green;
+}
+
+#title {
+    grid-row: 3;
+    grid-column: 2 / span 4;
+    font-family: cursive;
+    color: #551a8b;
+    font-size: 90px;
+}
+
+#timer {
+    grid-row: 1;
+    grid-column: 3 / span 2;
+    font-family: Courier, SimSun, Verdana, sans-serif;
+    font-size: 30px;
+    color: darkgreen;
+    font-weight: bolder;
+}
+
+#result {
+    grid-row: 5;
+    grid-column: 3 / span 2;
+    font-family: "Bradley Hand ITC", fantasy;
+    font-size: 30px;
+    color: mediumblue;
+    font-weight: 900;
+}
+
+#highScore {
+    grid-row: 1;
+    grid-column: 6;
+    font-family: "Arial Black", sans-serif;
+    font-size: 20px;
+    color: #551a8b;
+    transition: all 2s;
+}
+
+#button0 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#button1 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#button2 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#button3 {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+#button4 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#button5 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#button6 {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+#button7 {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+#button8 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#button9 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+#button10 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+#button11 {
+    grid-column: 5;
+    grid-row: 4;
+}
+
+button {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #551a8b;
+    border-radius: 1em;
+    border: gold 2px solid;
+}
+
+button:hover {
+    border: yellow 2px solid;
+    background-color: mediumpurple;
+}
+
+button:disabled {
+    background-color: #551a8b;
+    border: gold 2px solid;
+}
+
+img {
+    width: 80%;
+    height: 90%;
+    border-radius: .5em;
+}
+
+#start {
+    display: initial;
+}

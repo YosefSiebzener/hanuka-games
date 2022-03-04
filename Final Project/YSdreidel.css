@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+body {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    /* To be honest, I got this background from online. */
+    display: grid;
+    grid-template-columns: 25% 15% 10% 50%;
+    grid-template-rows: repeat(10, 2em);
+    justify-items: center;
+}
+
+#welcomeBanner{
+    color: #0000ee;
+    align-self: center;
+    text-align: center;
+    grid-row: 1 / span 7;
+    grid-column: 1 / span 4;
+    font-family: "Copperplate Gothic Light", Impact, fantasy;
+    font-weight: bolder;
+    font-size: 100px;
+}
+
+#start, #restart, #mainMenuButton{
+    width: 200px;
+    height: 150px;
+    color: yellow;
+    background-color: #551a8b;
+    border: yellow 10px solid;
+    transition: all 1s;
+    font-family: "Bradley Hand ITC", fantasy;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+#start:hover, #restart:hover, #mainMenuButton:hover {
+    color: #551a8b;
+    background-color: yellow;
+    border: #551a8b 30px solid;
+}
+#start {
+    grid-column: 1 / span 4;
+    grid-row: 10;
+}
+
+#restart {
+    grid-row: 10;
+    display: none;
+    grid-column: 1;
+}
+
+#mainMenuButton, #mainMenuLink {
+    grid-row: 10;
+    display: none;
+    grid-column: 3;
+    text-decoration: none;
+}
+
+#namesLabel, #potLabel, #geltLabel, #anteLabel, #shinLabel{
+    align-self: center;
+    justify-self: start;
+}
+
+#namesLabel, #anteLabel, #geltLabel, #potLabel, #shinLabel {
+    color: rebeccapurple;
+    font-family: fantasy;
+    font-size: 14px;
+}
+
+#displayAnte, #displayPot, #displayShin {
+    color: darkgreen;
+    font-family: fantasy;
+    font-size: 14px;
+}
+
+#alerts, #result {
+    grid-column: 1;
+    color: darkgreen;
+    font-family: fantasy;
+    display: none;
+}
+
+#alerts {
+    grid-row: 5;
+}
+
+#result {
+    grid-row: 4
+}
+
+#winnerBanner {
+    grid-column: 2;
+    grid-row: 1;
+    font-family: "Imprint MT Shadow", fantasy;
+    text-align: center;
+    color: #0000ee;
+    font-size: 60px;
+}
+
+input {
+    font-family: Algerian, Verdana, Geneva, sans-serif;
+    color: lawngreen;
+    background: linear-gradient(to bottom right, rebeccapurple, red);
+    display: block;
+    margin: auto;
+    grid-column: 2;
+}
+
+button {
+    background-color: #3f87a6;
+    border-radius: .5em;
+    transition: all 2s;
+    width: 5em;
+    height: 2em;
+    border: .1em black solid;
+    display: block;
+    margin: auto;
+    grid-column: 3;
+}
+
+button:hover {
+    background-color: #0000ee;
+    color: white;
+    border: .1em white solid;
+}
+
+#startGame {
+    width: 7em;
+    grid-row: 9;
+    display: none;
+}
+
+table {
+    grid-column: 4;
+    grid-row: 3 / span 2;
+    width: 50%;
+    border: 3px solid transparent;
+    border-collapse: collapse;
+    background-color: transparent;
+    color: transparent;
+    font-family: fantasy;
+}
+
+th, td {
+    width: 2.5em;
+    border: 3px solid transparent;
+    text-align: center;
+}
+
+.names {
+    grid-row: 1;
+    display: none;
+}
+
+.gelt {
+    grid-row: 2;
+    display: none;
+}
+
+.pot {
+    grid-row: 4;
+    display: none;
+}
+
+.shin {
+    grid-row: 6;
+    display: none;
+}
+
+.ante {
+    grid-row: 8;
+    display: none;
+}
+
+#dreidelBox {
+    border-radius: 1em;
+    width: 50%;
+    background-image: linear-gradient(to bottom right, blue, white);
+    grid-column: 2;
+    grid-row: 2 / 8;
+    border: yellow 2px solid;
+    margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+    display: none;
+}
+
+#dreidel {
+    margin: 0 auto;
+}
+
+#potTotal {
+    display: none;
+    grid-column: 2;
+    grid-row: 9;
+    border: rgb(255,204,51) 3px solid;
+    background-color: rgb(255,219,88);
+    color: silver;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    font-size: 2.3em;
+    text-align: center;
+    line-height: 3em;
+    font-family: "Brush Script MT", sans-serif;
+}
+
+#pic {
+    display: none;
+    grid-column: 1;
+    grid-row: 7;
+}
